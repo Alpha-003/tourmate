@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -340,7 +342,7 @@ class _RoomBookingState extends State<RoomBooking> {
                                     MediaQuery.of(context).size.width / 3 - 14,
                                 color: Colors.white,
                                 child: Column(
-                                  children: [Text("Rooms"), Text(roomsText())],
+                                  children: [Text("Rooms"), Text(roomsText(),style: TextStyle(fontWeight: FontWeight.bold),)],
                                 ),
                               ),
                             ],
