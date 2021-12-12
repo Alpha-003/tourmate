@@ -1,8 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:tourmate1/Register.dart';
+import 'package:tourmate1/allAreasCustomization.dart';
+import 'package:tourmate1/entertainmentDataCustomization.dart';
+import 'package:tourmate1/eventDataCustomization.dart';
+import 'package:tourmate1/hotelsData_customization.dart';
+import 'package:tourmate1/parkDataCustomization.dart';
+import 'package:tourmate1/restaurantDataCustomization.dart';
 import 'package:tourmate1/roomtypes.dart';
 import 'package:tourmate1/basic.dart';
 import 'package:tourmate1/booking_room.dart';
+import 'package:tourmate1/transportDataCustomization.dart';
+import 'package:tourmate1/user_info.dart';
 import 'about.dart';
 import 'login.dart';
 import 'provider.dart';
@@ -34,7 +42,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RoomTypes(),
+      home: EntertainmentDataCustomization(),
     );
   }
 }
@@ -67,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     body: SafeArea(
               child: Center(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,  
                   children: [
                     CircularProgressIndicator(),
                     SizedBox(height: 5),
@@ -90,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             darkTheme: ThemeData(
               brightness: Brightness.dark,
             ),
-            initialRoute: MyRoute.MainHome,
+            // initialRoute: MyRoute.MainHome,
             routes: {
               MyRoute.review: (context) => Review(),
               MyRoute.MainHome: (context) => MainHome(index: 0),
